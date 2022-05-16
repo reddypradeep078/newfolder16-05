@@ -6,8 +6,10 @@
     apt: 
       name: apache2
       state: present
+    when: ansible_os_family =="Debian"
 
   - name: Restart service httpd, in all cases
     ansible.builtin.service:
       name: apache2
       state: restarted
+    when: ansible_os_family =="Debian"  
