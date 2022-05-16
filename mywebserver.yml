@@ -18,11 +18,11 @@
     yum:
       name: httpd
       state: present 
-  - when: ansible_os_family =="RedHat" 
+    when: ansible_os_family =="RedHat" 
 
-  - name: i want to restart the service
+  - name: i want to start webserver
     service:
       name: httpd
       service: started
-  - when: ansible_os_family =="RedHat" 
+    when: ansible_os_family =="RedHat" 
 
