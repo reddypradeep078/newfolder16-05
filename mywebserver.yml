@@ -6,7 +6,8 @@
     apt: 
       name: apache2
       state: present
-  - name: install tree
-    apt:
-      name: tree
-      state: present
+
+  - name: Restart service httpd, in all cases
+    ansible.builtin.service:
+      name: apache2
+      state: restarted
