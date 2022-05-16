@@ -4,8 +4,8 @@
   - name: install webservers
     apt: 
       name: apache2
-      status: present
+      state: present
   - name: install tree
     tree:
       name: tree
-      status: present
+      state: present
