@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  become: yes
   tasks:
   - name: install webservers
     apt: 
@@ -10,4 +9,3 @@
     tree:
       name: tree
       status: present
-      
