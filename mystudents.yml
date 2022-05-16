@@ -1,0 +1,25 @@
+---
+- my students:
+  - name: anil
+    pheno: 9640265467
+    address: 
+     - door:
+     - streetno: 
+     - pincode:      
+       
+  - name: balu
+    phone: 9640265788
+    address: 
+    - hyd
+    - streetno
+
+  - name: pradeep
+    photo: 903030340
+    address: hyd
+
+  - name: shyam
+    phone: 7780684238
+    address:
+     - lgonda:
+     - door no:
+     - street: 
