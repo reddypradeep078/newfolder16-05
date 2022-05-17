@@ -4,25 +4,25 @@
   tasks:
   - name: install apache
     apt: 
-      name: apache2
+      name: "{{mywebpackonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
 
   - name: Restart service httpd, in all cases
     ansible.builtin.service:
-      name: apache2
+      name: {{mywebpackonubuntu}}"
       state: restarted
     when: ansible_os_family =="Debian"  
 
   - name: i want to install webserver on redhat nodes
     yum:
-      name: httpd
+      name: "{{mywebpackonredhat}}"
       state: present 
     when: ansible_os_family =="RedHat" 
 
   - name: i want to start webserver
     service:
-      name: httpd
+      name: {{mywebpackonredhat}}
       service: started
     when: ansible_os_family =="RedHat" 
 
