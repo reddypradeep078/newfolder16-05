@@ -22,7 +22,7 @@
 
   - name: i want to start webserver
     service:
-      name: "{{mywebpackonredhat}}""
+      name: "{{mywebpackonredhat}}"
       service: started
     when: ansible_os_family =="RedHat" 
 
