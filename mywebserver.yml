@@ -1,6 +1,7 @@
 ---
 - hosts: mywebservers
   become: yes
+  gather_facts: yes
   tasks:
   - name: install apache
     apt: 
@@ -8,11 +9,11 @@
       state: present
     when: ansible_os_family =="Debian"
 
-  - name: Restart service httpd, in all cases
-    ansible.builtin.service:
+  - name: i want to start apache2
+    service:
       name: "{{mywebpackonubuntu}}"
-      state: restarted
-    when: ansible_os_family =="Debian"  
+      state: restarted 
+    when: ansible_os_family =="Debian"
 
   - name: i want to install webserver on redhat nodes
     yum:
@@ -26,4 +27,5 @@
       service: started
     when: ansible_os_family =="RedHat" 
     
+
 
