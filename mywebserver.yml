@@ -1,5 +1,5 @@
 ---
-- hosts: [mywebservers:vars]
+- hosts: mywebservers
   become: yes
   tasks:
   - name: install apache
