@@ -2,6 +2,5 @@
 - hosts: 172.31.11.15
   become: yes
   tasks:
-    -name: i want to excecute in linux
-    command: hostname -f
-    
+    - name: i want to excecute in linux
+      command: hostname -f
