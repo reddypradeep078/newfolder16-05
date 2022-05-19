@@ -3,7 +3,7 @@
   become: yes
   vars:
     myjavapackonubuntu: "openjdk-8-jre"
-    myjavapackonredhat: "openjdk-8-jre"
+    myjavapackonredhat: "java-1.8.0-openjdk"
   tasks:
   - name: install java on ubuntu
     apt:
