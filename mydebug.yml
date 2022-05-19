@@ -5,7 +5,6 @@
     - name: i want to excecute in linux
       command: hostname -f
       register: myresult
-
     - name: i want of display the first task result 
       debug:
       msg: "{{myresult}}"
