@@ -3,8 +3,9 @@
   become: yes
   tasks:
   - name: install git 
-    apt: git 
-    state: present
+    apt: 
+      name: git 
+      state: present
 
   - name: install tree
     apt: 
